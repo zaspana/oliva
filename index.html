@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oliva Studio — Animation Studio</title>
+<meta name="description" content="Animation, character design, and motion work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav">
+      <a href="index.html" class="logo"><img src="assets/logo.png" alt="Oliva Studio"></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+      <ul class="nav-links">
+        <li><a href="#top" class="active" onclick="event.preventDefault(); window.scrollTo({top:0, behavior:'smooth'});">Home</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="intro-hero">
+    <div class="intro-hero-content">
+      <h1>Helping people understand, imagine and remember.</h1>
+      <h2>Because the best ideas aren't just explained - they are experienced.</h2>
+    </div>
+    <button class="scroll-cue" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})" aria-label="Scroll to see more">
+      <span>Scroll</span>
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="14" height="22" rx="7" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="8" cy="7" r="2" fill="currentColor"/>
+      </svg>
+    </button>
+  </section>
+
+  <main>
+
+    <section class="scene wrap" id="work">
+        <span class="scene-number">SC. 01 / 02</span>
+      </div>
+      <div style="border: var(--frame); border-radius: var(--radius); aspect-ratio: 16/9; background: var(--secondary); display:flex; align-items:center; justify-content:center;">
+        <p class="eyebrow" style="margin:0;">// embed your showreel here (YouTube / Vimeo)</p>
+      </div>
+    </section>
+
+    <section class="scene wrap">
+      <div class="scene-head">
+        <p class="eyebrow">Characters</p>
+        <span class="scene-number">SC. 02 / 02</span>
+      </div>
+      <div class="grid">
+        <a class="onion-card" href="project-kettlefolk.html">
+          <div class="onion-stage">
+            <div class="onion-frame f1">01</div>
+            <div class="onion-frame f2">02</div>
+            <div class="onion-frame f3">03</div>
+          </div>
+          <div class="onion-meta">
+            <p class="tag">Character Design</p>
+            <h3>KokoViki</h3>
+            <p>Kokoska to pa to. Pomaga ucit in je kullll. Blablalblallllaaha bla blaaaaaaaaaaaaaa in se blaaaaaaaaa bla blaaaa.</p>
+          </div>
+        </a>
+        <a class="onion-card" href="project-rook-bramble.html">
+          <div class="onion-stage">
+            <div class="onion-frame f1">01</div>
+            <div class="onion-frame f2">02</div>
+            <div class="onion-frame f3">03</div>
+          </div>
+          <div class="onion-meta">
+            <p class="tag">Character Design</p>
+            <h3>Pika</h3>
+            <p>Ginger. vesela in pametna in use to. Blablalblallllaaha bla blaaaaaaaaaaaaaa in se blaaaaaaaaa bla blaaaa.</p>
+          </div>
+        </a>
+        <a class="onion-card" href="project-neko-delivery.html">
+          <div class="onion-stage">
+            <div class="onion-frame f1">01</div>
+            <div class="onion-frame f2">02</div>
+            <div class="onion-frame f3">03</div>
+          </div>
+          <div class="onion-meta">
+            <p class="tag">Character Design</p>
+            <h3>Tretji nakljucni lik</h3>
+            <p>A friendly lik, designed for merchandising and mobile stickers. texttext text.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  
+    <section class="wrap" id="services" style="padding: 72px 0 24px;">
+      <p class="eyebrow">What I Offer</p>
+      <h2 style="font-size: clamp(2rem, 4vw, 3rem); max-width: 22ch;">Services, laid out like a storyboard</h2>
+      <p style="max-width: 56ch;">Each frame below is a service I offer on its own, or as part of a full production from script to final render.</p>
+    </section>
+
+    <section class="scene wrap">
+      <div class="panel-list">
+        <div class="panel">
+          <span class="panel-frame-no">FR. 01</span>
+          <div class="panel-thumb" style="background: var(--secondary);"></div>
+          <div>
+            <h3>Character design</h3>
+            <p>Original characters built from the ground up — silhouettes, turnarounds, expression sheets, and style guides ready for animation or merchandising.</p>
+          </div>
+        </div>
+        <div class="panel">
+          <span class="panel-frame-no">FR. 02</span>
+          <div class="panel-thumb" style="background: var(--accent);"></div>
+          <div>
+            <h3>Storyboarding & animatics</h3>
+            <p>Shot-by-shot boards and timed animatics that lock pacing and staging before full production begins, saving time and budget downstream.</p>
+          </div>
+        </div>
+        <div class="panel">
+          <span class="panel-frame-no">FR. 03</span>
+          <div class="panel-thumb" style="background: var(--primary);"></div>
+          <div>
+            <h3>2D animation</h3>
+            <p>Hand-drawn and rigged 2D animation for shorts, series, and branded content — from rough blocking through final clean-up.</p>
+          </div>
+        </div>
+        <div class="panel">
+          <span class="panel-frame-no">FR. 04</span>
+          <div class="panel-thumb" style="background: var(--secondary);"></div>
+          <div>
+            <h3>Motion graphics</h3>
+            <p>Title sequences, lower-thirds, app micro-interactions, and looping social content designed to move with intention.</p>
+          </div>
+        </div>
+        <div class="panel">
+          <span class="panel-frame-no">FR. 05</span>
+          <div class="panel-thumb" style="background: var(--accent);"></div>
+          <div>
+            <h3>Art direction</h3>
+            <p>Guiding the visual language of a project across a team — palettes, mood boards, and style consistency from pre-production to delivery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="wrap" id="about" style="padding: 72px 0 24px;">
+      <p class="eyebrow">About</p>
+      <h2 style="font-size: clamp(2rem, 4vw, 3rem); max-width: 20ch;">Hi, I draw things that move.</h2>
+    </section>
+
+    <section class="scene wrap about-grid">
+      <div class="about-portrait" role="img" aria-label="Portrait placeholder"></div>
+      <div>
+        <p>I'm an animator and character designer with a soft spot for hand-drawn line work and stories that feel a little bit alive. I trained in traditional 2D animation and spent a few years in studio pipelines before going independent to work directly with directors, small studios, and brands.</p>
+        <p>My favorite projects are the ones where a character shows up on page one as a rough scribble and leaves the process fully formed — with a walk, a voice, and opinions of their own. I care as much about the thinking behind a design as the polish on top of it.</p>
+        <p>When I'm not animating, I'm usually refilling a sketchbook, rewatching old Miyazaki films for the hundredth time, or looking for the next small, strange story worth telling.</p>
+
+        <h2 style="margin-top: 40px; font-size: 1.4rem;">Skills & tools</h2>
+        <div>
+          <div class="skill-row"><span>2D Animation</span><span>Advanced</span></div>
+          <div class="skill-row"><span>Character Design</span><span>Advanced</span></div>
+          <div class="skill-row"><span>Storyboarding</span><span>Advanced</span></div>
+          <div class="skill-row"><span>Toon Boom Harmony</span><span>Advanced</span></div>
+          <div class="skill-row"><span>Adobe Animate & After Effects</span><span>Advanced</span></div>
+          <div class="skill-row"><span>Procreate / Clip Studio Paint</span><span>Advanced</span></div>
+          <div class="skill-row"><span>Rigging (basic)</span><span>Intermediate</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="contact" style="padding: 72px 0 24px;">
+      <p class="eyebrow">Contact</p>
+      <h2 style="font-size: clamp(2rem, 4vw, 3rem); max-width: 20ch;">Let's get your story moving.</h2>
+      <p style="max-width: 56ch;">Tell me a bit about your project and I'll get back to you within a couple of days.</p>
+    </section>
+
+    <section class="scene wrap contact-grid">
+      <form id="contact-form" action="https://formspree.io/f/mdenndge" method="POST">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field">
+          <label for="project-type">Project type</label>
+          <input type="text" id="project-type" name="project-type" placeholder="Short film, character design, motion graphics…">
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Tell me about your project, timeline, and budget range."></textarea>
+        </div>
+        <button type="submit" class="btn btn-accent">Send message</button>
+        <p class="form-note" id="form-status">Sent straight to my inbox via Formspree.</p>
+      </form>
+
+      <div class="contact-info">
+        <div class="item">
+          <span class="eyebrow">Email</span>
+          <p style="margin:0; color: var(--text);">hello@olivastudio.com</p>
+        </div>
+        <div class="item">
+          <span class="eyebrow">Based in</span>
+          <p style="margin:0; color: var(--text);">Podpeška cesta 2367, Ljubljana, Slovenia</p>
+        </div>
+        <div class="item">
+          <span class="eyebrow">Response time</span>
+          <p style="margin:0; color: var(--text);">Usually within 2 business days</p>
+        </div>
+        <div class="item">
+          <span class="eyebrow">Elsewhere</span>
+          <p style="margin:0; color: var(--text);">Instagram · Vimeo · LinkedIn</p>
+        </div>
+      </div>
+    </section>
+  
+  </main>
+
+  <footer class="site-footer wrap">
+    <span>&copy; <span class="font-numeric">2026</span> Oliva Studio</span>
+    <div class="footer-links">
+      <a href="#contact">Contact</a>
+      <a href="#work">Work</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
