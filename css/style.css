@@ -13,7 +13,14 @@
 @font-face {
   font-family: "CustomDisplay";
   src: url("../assets/fonts/Display-Regular.woff2") format("woff2");
-  font-weight: 400 700;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CustomDisplay";
+  src: url("../assets/fonts/Display-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -49,6 +56,7 @@
   --font-display: "CustomDisplay", "Fraunces", "Georgia", serif;
   --font-body: "CustomBody", "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "CustomMono", "JetBrains Mono", ui-monospace, monospace;
+  --font-numeric: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 
   --frame: 1px solid var(--border);
   --radius: 10px;
@@ -60,7 +68,7 @@
    ========================================================= */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-#top, #work, #services, #about, #contact, #featured {
+#top, #services, #about, #contact, #featured {
   scroll-margin-top: 96px;
 }
 body {
@@ -234,7 +242,7 @@ button { font-family: inherit; cursor: pointer; }
   flex-wrap: wrap;
 }
 .scene-number {
-  font-family: var(--font-body);
+  font-family: var(--font-numeric);
   font-size: 0.78rem;
   color: var(--text-faint);
 }
@@ -377,7 +385,8 @@ button { font-family: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-display);
+  font-family: var(--font-numeric);
+  font-weight: 700;
   font-size: 3.2rem;
   color: var(--text);
   opacity: 0;
@@ -431,7 +440,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .panel:first-child { border-top: none; }
 .panel-frame-no {
-  font-family: var(--font-body);
+  font-family: var(--font-numeric);
   font-size: 0.78rem;
   color: var(--text-faint);
   padding-top: 6px;
@@ -480,8 +489,8 @@ button { font-family: inherit; cursor: pointer; }
    ========================================================= */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
 }
 .field { margin-bottom: 20px; }
 .field label {
@@ -507,8 +516,7 @@ button { font-family: inherit; cursor: pointer; }
 .field textarea { resize: vertical; min-height: 130px; }
 .field input:focus, .field textarea:focus { border-color: var(--primary); }
 
-.contact-info .item { padding: 18px 0; border-top: var(--frame); }
-.contact-info .item:first-child { border-top: none; }
+.contact-info .item { padding: 12px 0; }
 .contact-info .item span.eyebrow { display: block; margin-bottom: 4px; }
 .form-note {
   font-family: var(--font-mono);
@@ -600,4 +608,4 @@ button { font-family: inherit; cursor: pointer; }
 .site-footer a:hover { color: var(--primary); }
 .footer-links { display: flex; gap: 18px; }
 
-.font-numeric { font-family: var(--font-body); }
+.font-numeric { font-family: var(--font-numeric); }

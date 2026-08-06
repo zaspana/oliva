@@ -20,9 +20,8 @@
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
       <ul class="nav-links">
         <li><a href="#top" class="active" onclick="event.preventDefault(); window.scrollTo({top:0, behavior:'smooth'});">Home</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#work" onclick="event.preventDefault(); document.getElementById('work').scrollIntoView({behavior:'smooth', block:'center'});">Work</a></li>
+        <li><a href="#services">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -63,8 +62,7 @@
 
     <section class="wrap" id="contact" style="padding: 72px 0 24px;">
       <p class="eyebrow">Contact</p>
-      <h2 style="font-size: clamp(2rem, 4vw, 3rem); max-width: 20ch;">Let's get your story moving.</h2>
-      <p style="max-width: 56ch;">Tell me a bit about your project and I'll get back to you within a couple of days.</p>
+      <h2 style="font-size: clamp(2rem, 4vw, 3rem); max-width: 20ch;">What do you want people to remember?</h2>
     </section>
 
     <section class="scene wrap contact-grid">
@@ -78,7 +76,7 @@
           <input type="email" id="email" name="email" required>
         </div>
         <div class="field">
-          <label for="project-type">Project type</label>
+          <label for="project-type">Subject</label>
           <input type="text" id="project-type" name="project-type" placeholder="Short film, character design, motion graphics…">
         </div>
         <div class="field">
@@ -91,19 +89,12 @@
 
       <div class="contact-info">
         <div class="item">
-          <span class="eyebrow">Email</span>
           <p style="margin:0; color: var(--text);">hello@olivastudio.com</p>
         </div>
         <div class="item">
-          <span class="eyebrow">Based in</span>
-          <p style="margin:0; color: var(--text);">Podpeška cesta 2367, Ljubljana, Slovenia</p>
+          <p style="margin:0; color: var(--text);">Podpeška cesta <span class="font-numeric">2367</span>, Ljubljana, Slovenia</p>
         </div>
         <div class="item">
-          <span class="eyebrow">Response time</span>
-          <p style="margin:0; color: var(--text);">Usually within 2 business days</p>
-        </div>
-        <div class="item">
-          <span class="eyebrow">Elsewhere</span>
           <p style="margin:0; color: var(--text);">Instagram · Vimeo · LinkedIn</p>
         </div>
       </div>
@@ -115,7 +106,7 @@
     <span>&copy; <span class="font-numeric">2026</span> Oliva Studio</span>
     <div class="footer-links">
       <a href="#contact">Contact</a>
-      <a href="#work">Work</a>
+      <a href="#work" onclick="event.preventDefault(); document.getElementById('work').scrollIntoView({behavior:'smooth', block:'center'});">Work</a>
     </div>
   </footer>
 
