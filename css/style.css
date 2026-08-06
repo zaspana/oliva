@@ -464,8 +464,8 @@ button { font-family: inherit; cursor: pointer; }
    ========================================================= */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
+  grid-template-columns: 1fr;
+  gap: 48px;
 }
 .field { margin-bottom: 20px; }
 .field label {
