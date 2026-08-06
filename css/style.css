@@ -115,19 +115,22 @@ button { font-family: inherit; cursor: pointer; }
 /* =========================================================
    NAV
    ========================================================= */
+/* =========================================================
+   NAV (Mobile Overlay & Spacing Fixes)
+   ========================================================= */
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 30;
+  z-index: 100; /* High z-index keeps header above everything */
   background: var(--background);
   border-bottom: var(--frame);
 }
 .nav {
+  position: relative; /* Anchor for absolute mobile menu */
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  row-gap: 10px;
   padding: 18px 32px;
   max-width: var(--max-width);
   margin: 0 auto;
@@ -144,6 +147,7 @@ button { font-family: inherit; cursor: pointer; }
   height: 46px;
   width: auto;
   max-width: 160px;
+  object-fit: contain;
   display: block;
 }
 .nav-links {
@@ -161,6 +165,7 @@ button { font-family: inherit; cursor: pointer; }
   border-radius: 999px;
   color: var(--text-soft);
   transition: background 0.15s ease, color 0.15s ease;
+  display: block;
 }
 .nav-links a:hover { background: var(--secondary); color: var(--text); }
 .nav-links a.active { background: var(--primary); color: var(--background); }
@@ -173,23 +178,52 @@ button { font-family: inherit; cursor: pointer; }
   padding: 8px 10px;
   font-family: var(--font-mono);
 }
+
+/* --- Mobile Breakpoint --- */
 @media (max-width: 720px) {
-  .nav-toggle { display: block; }
+  .wrap {
+    padding: 0 20px !important; /* Forces 20px padding from screen edges */
+  }
+
+  .nav {
+    padding: 14px 20px;
+  }
+  
+  .nav-toggle { 
+    display: block; 
+  }
+
   .nav-links {
+    display: none; /* Hidden until menu toggled */
     position: absolute;
     top: 100%;
     left: 0;
-    right: 0;
+    width: 100%; /* Spans full width of screen */
     background: var(--background);
     border-bottom: var(--frame);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    
+    /* Stacks menu items neatly below one another */
     flex-direction: column;
     align-items: stretch;
-    padding: 10px 20px 18px;
-    gap: 2px;
-    display: none;
+    padding: 12px 20px 20px;
+    gap: 8px;
+    z-index: 101;
   }
-  .nav-links.open { display: flex; }
-  .nav-links a { padding: 12px 14px; }
+
+  .nav-links.open { 
+    display: flex; 
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a { 
+    padding: 12px 16px;
+    width: 100%;
+    text-align: left;
+  }
 }
 
 /* =========================================================
@@ -610,3 +644,77 @@ button { font-family: inherit; cursor: pointer; }
 .footer-links { display: flex; gap: 18px; }
 
 .font-numeric { font-family: var(--font-numeric); }
+/* =========================================================
+   MOBILE SECTION SPACING FIXES
+   ========================================================= */
+@media (max-width: 720px) {
+  /* Gives standard scenes (like #work) healthy top/bottom breathing room */
+  .scene {
+    padding: 60px 0 !important;
+  }
+
+  /* Ensures sections with inline padding scale down nicely on phones */
+  #services {
+    padding: 60px 0 !important;
+  }
+
+  #about, 
+  #contact {
+    padding: 48px 0 16px !important;
+  }
+
+  /* Fixes spacing inside the service statement text */
+  .service-statement p {
+    margin-bottom: 36px !important;
+  }
+
+  /* Adds breathing room between contact form and info block */
+  .contact-grid {
+    gap: 40px !important;
+  }
+}
+/* =========================================================
+   PROTECT SIDE PADDING ON ALL MOBILE WRAPPERS
+   ========================================================= */
+@media (max-width: 720px) {
+  /* Forces left and right inner padding on every container, 
+     overriding any inline style="padding: ..." attributes */
+  .wrap,
+  section.wrap,
+  main .wrap {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+/* =========================================================
+   GLOBAL MOBILE EDGE-PAD FIX
+   ========================================================= */
+@media (max-width: 720px) {
+  /* 1. Force box-sizing across all elements */
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+
+  /* 2. Prevent horizontal scrolling on the entire page */
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+
+  /* 3. Force side padding on all wrappers & heroes */
+  .wrap,
+  .intro-hero-content,
+  .site-header,
+  .nav,
+  main,
+  section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* 4. Ensure headings and paragraphs scale down without overflowing */
+  h1, h2, h3, h4, p {
+    max-width: 100% !important;
+    word-break: break-word; /* Prevents long words/links from pushing screen out */
+  }
+}
