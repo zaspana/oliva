@@ -101,7 +101,7 @@ button { font-family: inherit; cursor: pointer; }
 .wrap {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 clamp(20px, 5vw, 32px);
 }
 
 .eyebrow {
@@ -732,10 +732,15 @@ button { font-family: inherit; cursor: pointer; }
   background-position: center;
   background-repeat: no-repeat;
 }
-#contact,
-.contact-grid {
+#contact {
   background-image: url('../assets/yellow.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 160px 0 120px !important;
+}
+@media (max-width: 720px) {
+  #contact {
+    padding: 100px 0 60px !important;
+  }
 }
