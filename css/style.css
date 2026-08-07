@@ -60,7 +60,7 @@
 
   --frame: 1px solid var(--border);
   --radius: 10px;
-  --max-width: none;
+  --max-width: 1180px;
 }
 
 /* =========================================================
@@ -297,7 +297,7 @@ button { font-family: inherit; cursor: pointer; }
   text-align: left;
   text-align: left;
   background-image: url('../assets/olive.png');
-  background-size: 66%;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -728,14 +728,14 @@ button { font-family: inherit; cursor: pointer; }
    ========================================================= */
 #services {
   background-image: url('../assets/orange.png');
-  background-size: 66%;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 #contact,
 .contact-grid {
   background-image: url('../assets/yellow.png');
-  background-size: 66%;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
