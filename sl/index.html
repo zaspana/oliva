@@ -1,42 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oliva Studio — Animation Studio</title>
-<meta name="description" content="Animation, character design, and motion work.">
+<title>Oliva Studio — Animacijski studio</title>
+<meta name="description" content="Animacija, oblikovanje likov in gibljiva grafika.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../css/style.css">
 <link rel="alternate" hreflang="en" href="https://zaspana.github.io/oliva/">
 <link rel="alternate" hreflang="sl" href="https://zaspana.github.io/oliva/sl/">
 </head>
 <body>
   <header class="site-header" id="top">
     <nav class="nav">
-      <a href="index.html" class="logo"><img src="assets/logo.png" alt="Oliva Studio"></a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+      <a href="index.html" class="logo"><img src="../assets/logo.png" alt="Oliva Studio"></a>
+      <button class="nav-toggle" aria-label="Preklopi navigacijo" aria-expanded="false">Meni</button>
       <ul class="nav-links">
-        <li><a href="#top" class="active" onclick="event.preventDefault(); window.scrollTo({top:0, behavior:'smooth'});">Home</a></li>
-        <li><a href="#work" onclick="event.preventDefault(); document.getElementById('work').scrollIntoView({behavior:'smooth', block:'center'});">Work</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="sl/index.html">SL</a></li>
+        <li><a href="#top" class="active" onclick="event.preventDefault(); window.scrollTo({top:0, behavior:'smooth'});">Domov</a></li>
+        <li><a href="#work" onclick="event.preventDefault(); document.getElementById('work').scrollIntoView({behavior:'smooth', block:'center'});">Delo</a></li>
+        <li><a href="#services">Storitve</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="../index.html">EN</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="intro-hero">
     <div class="intro-hero-content">
-      <h1>Helping people understand, imagine and remember.</h1>
-      <h2>Because the best ideas aren't just explained - they are experienced.</h2>
+      <h1>Pomagam ljudem razumeti, si predstavljati in si zapomniti.</h1>
+      <h2>Ker se najboljših idej ne le razloži - temveč se jih doživi.</h2>
     </div>
-    <button class="scroll-cue" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})" aria-label="Scroll to see more">
-      <span>Scroll</span>
+    <button class="scroll-cue" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})" aria-label="Pomaknite se navzdol za več">
+      <span>Podrsaj</span>
       <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="1" y="1" width="14" height="22" rx="7" stroke="currentColor" stroke-width="1.5"/>
         <circle cx="8" cy="7" r="2" fill="currentColor"/>
@@ -48,15 +48,15 @@
 
     <section class="scene wrap" id="work">
       <div style="border: var(--frame); border-radius: var(--radius); aspect-ratio: 16/9; background: var(--secondary); display:flex; align-items:center; justify-content:center;">
-        <p class="eyebrow" style="margin:0;">// embed your showreel here (YouTube / Vimeo)</p>
+        <p class="eyebrow" style="margin:0;">// tukaj vstavite svoj video (YouTube / Vimeo)</p>
       </div>
     </section>
   
     <section class="wrap" id="services" style="padding: 96px 0;">
       <div class="service-statement">
-        <p><strong>Write stories.</strong></p>
-        <p>Illustrate ideas.</p>
-        <p>Animate everything.</p>
+        <p><strong>Pišem zgodbe.</strong></p>
+        <p>Ilustriram ideje.</p>
+        <p>Animiram vse.</p>
       </div>
     </section>
   
@@ -64,30 +64,30 @@
     </section>
 
     <section class="wrap" id="contact" style="padding: 72px 0 24px;">
-      <p class="eyebrow">Contact</p>
-      <h2 style="font-size: clamp(0.75rem, 4vw, 1.4rem); white-space: nowrap;">What do you want people to remember?</h2>
+      <p class="eyebrow">Kontakt</p>
+      <h2 style="font-size: clamp(0.75rem, 4vw, 1.4rem); white-space: nowrap;">Kaj želite, da si ljudje zapomnijo?</h2>
     </section>
 
     <section class="scene wrap contact-grid">
       <form id="contact-form" action="https://formspree.io/f/mdenndge" method="POST">
         <div class="field">
-          <label for="name">Name</label>
+          <label for="name">Ime</label>
           <input type="text" id="name" name="name" required>
         </div>
         <div class="field">
-          <label for="email">Email</label>
+          <label for="email">E-pošta</label>
           <input type="email" id="email" name="email" required>
         </div>
         <div class="field">
-          <label for="project-type">Subject</label>
-          <input type="text" id="project-type" name="project-type" placeholder="Short film, character design, motion graphics…">
+          <label for="project-type">Zadeva</label>
+          <input type="text" id="project-type" name="project-type" placeholder="Kratki film, oblikovanje likov, gibljiva grafika …">
         </div>
         <div class="field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required placeholder="Tell me about your project, timeline, and budget range."></textarea>
+          <label for="message">Sporočilo</label>
+          <textarea id="message" name="message" required placeholder="Povejte mi več o svojem projektu, časovnici in okvirnem proračunu."></textarea>
         </div>
-        <button type="submit" class="btn btn-accent">Send message</button>
-        <p class="form-note" id="form-status">Sent straight to my inbox via Formspree.</p>
+        <button type="submit" class="btn btn-accent">Pošlji sporočilo</button>
+        <p class="form-note" id="form-status">Sporočilo gre neposredno v mojo e-pošto prek Formspree.</p>
       </form>
 
       <div class="contact-info">
@@ -95,7 +95,7 @@
           <p style="margin:0; color: var(--text);">hello@oliva-studio.com</p>
         </div>
         <div class="item">
-          <p style="margin:0; color: var(--text);">Podpeška cesta 236f, Ljubljana, Slovenia</p>
+          <p style="margin:0; color: var(--text);">Podpeška cesta 236f, Ljubljana, Slovenija</p>
         </div>
         <div class="item">
           <p style="margin:0; color: var(--text);">
@@ -112,11 +112,11 @@
   <footer class="site-footer wrap">
     <span>&copy; 2026 Oliva Studio</span>
     <div class="footer-links">
-      <a href="#contact">Contact</a>
-      <a href="#work" onclick="event.preventDefault(); document.getElementById('work').scrollIntoView({behavior:'smooth', block:'center'});">Work</a>
+      <a href="#contact">Kontakt</a>
+      <a href="#work" onclick="event.preventDefault(); document.getElementById('work').scrollIntoView({behavior:'smooth', block:'center'});">Delo</a>
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>
