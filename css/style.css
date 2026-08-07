@@ -60,7 +60,7 @@
 
   --frame: 1px solid var(--border);
   --radius: 10px;
-  --max-width: 1180px;
+  --max-width: 1440px;
 }
 
 /* =========================================================
@@ -296,6 +296,11 @@ button { font-family: inherit; cursor: pointer; }
   justify-content: flex-start;
   text-align: left;
   text-align: left;
+  background-image: url('../assets/olive.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .intro-hero-content {
   width: 100%;
@@ -718,4 +723,22 @@ button { font-family: inherit; cursor: pointer; }
     max-width: 100% !important;
     word-break: break-word; /* Prevents long words/links from pushing screen out */
   }
+}
+/* =========================================================
+   SECTION BACKGROUND WASHES (Services / Contact)
+   ========================================================= */
+#services {
+  background-image: url('../assets/orange.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#contact,
+.contact-grid {
+  background-image: url('../assets/yellow.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
